@@ -7,7 +7,7 @@ export default {
   name: "AppMain",
   components: {
     SingleMovie,
-    CountryFlag, 
+    CountryFlag,
   },
   data() {
     return {
@@ -19,7 +19,6 @@ export default {
 
 <template>
   <SingleMovie :movie="movie" v-for="movie in store.movies"></SingleMovie>
-
 </template>
 
 <style scoped lang="scss"></style>

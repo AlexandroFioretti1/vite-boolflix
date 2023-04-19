@@ -1,10 +1,26 @@
 <script>
 import { store } from "../assets/data/store";
+import CountryFlag from "vue-country-flag-next";
 
 export default {
   name: "SingleMovie",
+  components: { CountryFlag },
   props: {
     movie: Object,
+  },
+  methods: {
+    uselanguage(language) {
+      switch (language) {
+        case "ko":
+          return "kr";
+        case "ja":
+          return "jp";
+        case "en":
+          return "gb";
+        default:
+          return language;
+      }
+    },
   },
   data() {
     return {
@@ -25,6 +41,14 @@ export default {
               <h3>{{ movie.original_title }}</h3>
               <h3>{{ movie.original_language }}</h3>
               <h3>{{ movie.vote_average }}</h3>
+              <p>
+                Language: {{ movie.original_language
+                }}<country-flag
+                  :country="uselanguage(movie.original_language)"
+                  size="normal"
+                  :rounded="true"
+                />
+              </p>
             </div>
           </div>
         </div>
