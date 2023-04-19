@@ -19,13 +19,12 @@ export default {
     <div class="movie_info text-center">
       <div class="text">
         <div class="container d-flex justify-content-between">
-          <div class="row col-4 ">
+          <div class="row col-4">
             <div class="card">
               <h3>{{ movie.title }}</h3>
               <h3>{{ movie.original_title }}</h3>
               <h3>{{ movie.original_language }}</h3>
               <h3>{{ movie.vote_average }}</h3>
-        
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const store = reactive({
   movies: [],
   SearchMovies: "",
   fetchMovie() {
-    let url = this.API_URL + this.SearchMovies
+    let url = this.API_URL + this.SearchMovies;
     axios
       .get(url)
       .then((response) => {

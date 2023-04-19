@@ -16,8 +16,7 @@ export default {
 </script>
 
 <template>
- 
-  <SingleMovie :movie="movie" v-for="movie in store.movies"> </SingleMovie>
+  <SingleMovie :movie="movie" v-for="movie in store.movies"></SingleMovie>
 </template>
 
 <style scoped lang="scss"></style>
