@@ -7,7 +7,7 @@ export default {
   name: "AppMain",
   components: {
     SingleMovie,
-    CountryFlag,
+    CountryFlag, 
   },
   data() {
     return {
