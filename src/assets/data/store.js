@@ -4,8 +4,8 @@ import axios from "axios";
 export const store = reactive({
   loading: true,
   API_URL: "api_key=8948c6e3da5a8ad54939ce7b68f2b97b",
-  cards: null,
-  fetchCard(url) {
+  movies: null,
+  /*  fetchMovie(url) {
     axios
       .get(url)
       .then((response) => {
@@ -16,5 +16,5 @@ export const store = reactive({
         console.log(err);
         console.error(err.messagge);
       });
-  },
+  }, */
 });
