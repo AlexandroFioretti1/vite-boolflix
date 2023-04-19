@@ -5,22 +5,21 @@ export const store = reactive({
   loading: true,
   API_URL:
     "https://api.themoviedb.org/3/search/movie?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
-  movies: null,
+  movies: [],
   SearchMovies: "",
-  //title:,
-  //original_title;,
-  //original_lenguage;,
-  //vote_avarage;,
-  /*  fetchMovie(url) {
+  fetchMovie() {
+    let url = this.API_URL + this.SearchMovies
     axios
       .get(url)
       .then((response) => {
-        this.cards = response.data.data;
+        console.log(response);
+        this.movies = response.data.results;
+        console.log(this.movies);
         this.loading = false;
       })
       .catch((err) => {
         console.log(err);
         console.error(err.messagge);
       });
-  }, */
+  },
 });

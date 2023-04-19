@@ -13,7 +13,7 @@ export default {
 
 <template>
   <footer>
-    <div>sono footer</div>
+    <span>copyright by Alexandro Fioretti &copy;</span>
   </footer>
 </template>
 

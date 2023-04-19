@@ -1,9 +1,12 @@
 <script>
 import { store } from "../assets/data/store";
+import SingleMovie from "./SingleMovie.vue";
 
 export default {
   name: "AppMain",
-  components: {},
+  components: {
+    SingleMovie,
+  },
   data() {
     return {
       store,
@@ -13,9 +16,8 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div>sono Main</div>
-  </main>
+ 
+  <SingleMovie :movie="movie" v-for="movie in store.movies"> </SingleMovie>
 </template>
 
 <style scoped lang="scss"></style>
