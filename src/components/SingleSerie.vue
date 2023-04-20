@@ -3,10 +3,10 @@ import { store } from "../assets/data/store";
 import CountryFlag from "vue-country-flag-next";
 
 export default {
-  name: "SingleMovie",
+  name: "SingleSerie",
   components: { CountryFlag },
   props: {
-    movie: Object,
+    serie: Object,
   },
   methods: {
     uselanguage(language) {
@@ -33,17 +33,17 @@ export default {
 <template>
 
   <div>
-    <div class="movie_info text-center">
+    <div class="serie_info text-center">
       <div class="text">
         <div class="container d-flex justify-content-between">
           <div class="row col-4">
             <div class="card">
-              <h2>Movie</h2>
-              <img :src="`${store.Img_Path}${movie.poster_path}`" alt="">
-              <h3>{{ movie.title }}</h3>
-              <h3>{{ movie.original_title }}</h3>
-              <p>Language: <country-flag :country="uselanguage(movie.original_language)" size="normal" :rounded="true" /></p>
-              <h3>{{ movie.vote_average }}</h3>
+              <h2>Series</h2>
+              <img :src="`${store.Img_Path}${serie.poster_path}`" alt="">
+              <h3>{{ serie.name }}</h3>
+              <h3>{{ serie.original_name }}</h3>
+              <p> Language: <country-flag :country="uselanguage(serie.original_language)" size="normal" :rounded="true" /> </p>
+              <h3>{{ serie.vote_average }}</h3>
             </div>
           </div>
         </div>
@@ -52,6 +52,7 @@ export default {
   </div>
 
 </template>
+
 
 <style scoped lang="scss">
 

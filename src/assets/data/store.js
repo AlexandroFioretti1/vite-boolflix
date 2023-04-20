@@ -5,16 +5,36 @@ export const store = reactive({
   loading: true,
   API_URL:
     "https://api.themoviedb.org/3/search/movie?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
+  API_URL_SERIES:
+    "https://api.themoviedb.org/3/search/tv?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
+  Img_Path: "https://image.tmdb.org/t/p/w342",
   movies: [],
-  SearchMovies: "",
+  series: [],
+  Search: "",
   fetchMovie() {
-    let url = this.API_URL + this.SearchMovies;
+    let url = this.API_URL + this.Search;
     axios
       .get(url)
       .then((response) => {
         console.log(response);
         this.movies = response.data.results;
         console.log(this.movies);
+        this.loading = false;
+      })
+      .catch((err) => {
+        console.log(err);
+        console.error(err.messagge);
+      });
+  },
+
+  fetchSerie() {
+    let url = this.API_URL_SERIES + this.Search;
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response);
+        this.series = response.data.results;
+        console.log(this.series);
         this.loading = false;
       })
       .catch((err) => {

@@ -11,34 +11,25 @@ export default {
   },
 };
 </script>
+
 <template>
+
   <header>
     <div class="container">
       <div class="d-flex justify-content-between align-items-center pt-2">
         <h1>BOOLFLIX</h1>
         <div>
           <div class="input-group mb-3">
-            <input
-              v-model="store.SearchMovies"
-              type="text"
-              class="form-control"
-              placeholder="Search Film or Series"
-              aria-label="Search Film or Series"
-              aria-describedby="button-addon2"
-            />
-            <button
-              @click="store.fetchMovie()"
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              Search
-            </button>
+            <input v-model="store.Search" type="text" class="form-control" placeholder="Search Film or Series" aria-label="Search Film or Series" aria-describedby="button-addon2" />
+            <button @click="store.fetchMovie(), store.fetchSerie()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
           </div>
         </div>
       </div>
     </div>
   </header>
+
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

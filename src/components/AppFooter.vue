@@ -12,9 +12,13 @@ export default {
 </script>
 
 <template>
+
   <div class="container">
     <span>COPYRIGHT By Alexandro Fioretti &copy;</span>
   </div>
+
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
