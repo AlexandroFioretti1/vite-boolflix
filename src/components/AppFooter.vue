@@ -12,13 +12,9 @@ export default {
 </script>
 
 <template>
-
+<!-- copyright footer -->
   <div class="container">
     <span>COPYRIGHT By Alexandro Fioretti &copy;</span>
   </div>
 
 </template>
-
-<style scoped lang="scss">
-
-</style>

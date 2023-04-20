@@ -31,28 +31,19 @@ export default {
 </script>
 
 <template>
-
-  <div>
-    <div class="movie_info text-center">
-      <div class="text">
-        <div class="container d-flex justify-content-between">
-          <div class="row col-4">
-            <div class="card">
-              <h2>Movie</h2>
-              <img :src="`${store.Img_Path}${movie.poster_path}`" alt="">
-              <h3>{{ movie.title }}</h3>
-              <h3>{{ movie.original_title }}</h3>
-              <p>Language: <country-flag :country="uselanguage(movie.original_language)" size="normal" :rounded="true" /></p>
-              <h3>{{ movie.vote_average }}</h3>
-            </div>
-          </div>
+  <!-- Card whit Films -->
+  <div class="container d-flex justify-content-between text-center">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <h2>Movie</h2>
+          <img :src="`${store.Img_Path}${movie.poster_path}`" alt="img photo" />
+          <h3>{{ movie.title }}</h3>
+          <h3>{{ movie.original_title }}</h3>
+          <p>Language: <country-flag :country="uselanguage(movie.original_language)" size="normal" :rounded="true" /> </p>
+          <h3>{{ movie.vote_average }}</h3>
         </div>
       </div>
     </div>
   </div>
-
 </template>
-
-<style scoped lang="scss">
-
-</style>

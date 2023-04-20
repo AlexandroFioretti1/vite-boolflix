@@ -31,29 +31,19 @@ export default {
 </script>
 
 <template>
-
-  <div>
-    <div class="serie_info text-center">
-      <div class="text">
-        <div class="container d-flex justify-content-between">
-          <div class="row col-4">
-            <div class="card">
-              <h2>Series</h2>
-              <img :src="`${store.Img_Path}${serie.poster_path}`" alt="">
-              <h3>{{ serie.name }}</h3>
-              <h3>{{ serie.original_name }}</h3>
-              <p> Language: <country-flag :country="uselanguage(serie.original_language)" size="normal" :rounded="true" /> </p>
-              <h3>{{ serie.vote_average }}</h3>
-            </div>
-          </div>
+  <!-- Card whit Series Tv -->
+  <div class="container d-flex justify-content-between text-center">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <h2>Series</h2>
+          <img :src="`${store.Img_Path}${serie.poster_path}`" alt="img serie" />
+          <h3>{{ serie.name }}</h3>
+          <h3>{{ serie.original_name }}</h3>
+          <p>Language: <country-flag :country="uselanguage(serie.original_language)" size="normal" :rounded="true" /></p>
+          <h3>{{ serie.vote_average }}</h3>
         </div>
       </div>
     </div>
   </div>
-
 </template>
-
-
-<style scoped lang="scss">
-
-</style>

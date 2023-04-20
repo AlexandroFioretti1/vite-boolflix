@@ -3,14 +3,19 @@ import axios from "axios";
 
 export const store = reactive({
   loading: true,
-  API_URL:
-    "https://api.themoviedb.org/3/search/movie?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
-  API_URL_SERIES:
-    "https://api.themoviedb.org/3/search/tv?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
+  /* API for movies */
+  API_URL: "https://api.themoviedb.org/3/search/movie?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
+
+  /* API for series */
+  API_URL_SERIES: "https://api.themoviedb.org/3/search/tv?api_key=8948c6e3da5a8ad54939ce7b68f2b97b&query=",
+
+  /* Url for link img */
   Img_Path: "https://image.tmdb.org/t/p/w342",
   movies: [],
   series: [],
   Search: "",
+
+  /* function for fetch Movie */
   fetchMovie() {
     let url = this.API_URL + this.Search;
     axios
@@ -27,6 +32,7 @@ export const store = reactive({
       });
   },
 
+  /* function for fetch Serie */
   fetchSerie() {
     let url = this.API_URL_SERIES + this.Search;
     axios
