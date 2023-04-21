@@ -61,29 +61,4 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card {
-  background-color: black;
-  color: white;
-  position: relative;
-
-  &:hover {
-    .info_card {
-      display: inline-block;
-    }
-    .img-fluid{
-      filter: brightness(0.1);
-    }
-  }
-
-  .red_c {
-    color: red;
-  }
-
-  .info_card {
-    display: none;
-    position: absolute;
-    top: 30%;
-    right: 0;
-  }
-}
 </style>
