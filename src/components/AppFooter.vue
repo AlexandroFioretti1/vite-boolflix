@@ -12,9 +12,8 @@ export default {
 </script>
 
 <template>
-<!-- copyright footer -->
+  <!-- copyright footer -->
   <div class="container">
     <span>COPYRIGHT By Alexandro Fioretti &copy;</span>
   </div>
-
 </template>
