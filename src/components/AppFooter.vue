@@ -20,13 +20,13 @@ export default {
   </footer>
 </template>
 
-<style>
+<style lang="scss" scoped>
+footer {
+  background-color: black;
+  height: 4vh;
+    span {
+      color: red;
+}
+}
 
-footer{
-background-color: black;
-height: 4vh;
-}
-span{
-  color: red;
-}
 </style>
