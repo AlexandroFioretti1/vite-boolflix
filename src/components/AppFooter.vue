@@ -13,7 +13,20 @@ export default {
 
 <template>
   <!-- copyright footer -->
-  <div class="container">
-    <span>COPYRIGHT By Alexandro Fioretti &copy;</span>
-  </div>
+  <footer>
+    <div class="container text-center">
+      <span>COPYRIGHT By Alexandro Fioretti &copy;</span>
+    </div>
+  </footer>
 </template>
+
+<style>
+
+footer{
+background-color: black;
+height: 4vh;
+}
+span{
+  color: red;
+}
+</style>
